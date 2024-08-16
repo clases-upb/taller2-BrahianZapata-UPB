@@ -43,7 +43,20 @@ public class App {
      * saldo_taquilla = base + total recaudos - total_retiros
      * Si hay algún error, retorne -1.
      */
+    public static int Calcular_saldo (int dinero_taquilla, int total_recaudos,int total_retiros){
+        try {
+            final int base = 2000000;
 
+            if (base != dinero_taquilla)
+                return -1;
+            
+            int saldo_taquilla = base + total_recaudos - total_retiros;
+                return saldo_taquilla;
+        } 
+        catch (Exception e) {
+            return -1;
+        }
+    }
 
     /*
      * 2. Diseñe un algoritmo e implemente la función Calcular_tip que reciba
